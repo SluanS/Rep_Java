@@ -1,4 +1,4 @@
-package exercicios.nelioalves.while_exercise;
+package exercicios.nelioalves._for_while_exercise;
 import java.util.Scanner;
 public class PlanoCartesianoQuadrante {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercicios.nelioalves.while_exercise;
+package exercicios.nelioalves._for_while_exercise;
 /*
 * Um Posto de combustíveis deseja determinar qual de seus produtos tem a preferência de seus clientes.
 * 1.Álcool
