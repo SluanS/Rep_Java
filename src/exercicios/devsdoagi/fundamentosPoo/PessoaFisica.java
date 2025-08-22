@@ -44,7 +44,11 @@ public class PessoaFisica extends Cliente{
         return this.rendaMensal;
     }
     // Metodo que retorna um objeto da classe conta com os atributos adquieridos na classe cliente
-    public Conta abrirConta(){
-        return new Conta(this.nomeCliente,this.cpfCliente);
+    public ContaCorrente abrirContaCorrente(){
+        return new ContaCorrente(this.nomeCliente,this.cpfCliente);
+    }
+    @Override
+    public ContaPoupanca abrirPoupanca(){
+        return new ContaPoupanca(this.nomeCliente, this.cpfCliente);
     }
 }

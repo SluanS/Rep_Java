@@ -32,7 +32,11 @@ public class PessoaJuridica extends Cliente{
         return this.faturamentoMensal;
     }
     @Override
-    public Conta abrirConta(){
-        return new Conta(this.titular,this.cnpj);
+    public ContaCorrente abrirContaCorrente(){
+        return new ContaCorrente(this.titular,this.cnpj);
+    }
+    @Override
+    public ContaPoupanca abrirPoupanca(){
+        return new ContaPoupanca(this.titular,this.cnpj);
     }
 }

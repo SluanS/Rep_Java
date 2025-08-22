@@ -2,7 +2,7 @@ package exercicios.devsdoagi.fundamentosPoo;
 
 import java.util.Random;
 
-public class Conta implements OperacoesBancarias{
+public abstract class Conta implements OperacoesBancarias{
     private String titular;
     private String registro;
     private String numeroConta;
@@ -30,6 +30,12 @@ public class Conta implements OperacoesBancarias{
     public double getSaldo(){
         return this.saldo;
     }
+    public void setSaldo(double newSaldo){
+        this.saldo = newSaldo;
+    }
+    public String getNumeroConta(){
+        return this.numeroConta;
+    }
     @Override
     public void sacar(double valor){
         if (valor > this.saldo || valor < 0){
@@ -37,7 +43,7 @@ public class Conta implements OperacoesBancarias{
         }
         else {
             this.saldo = this.saldo - valor;
-            System.out.printf("Saque de R$%.2f autorizado pela intituição financeira",valor);
+            System.out.printf("Saque de R$%.2f autorizado pela intituição financeira\n",valor);
         }
     }
     @Override
@@ -47,7 +53,8 @@ public class Conta implements OperacoesBancarias{
         }
         else {
             this.saldo += valor;
-            System.out.printf("Deposíto de R$%.2f efetuado com sucesso");
+            System.out.printf("Deposíto de R$%.2f efetuado com sucesso\n",valor);
         }
     }
+    public abstract void aplicarJuros();
 }
